@@ -1,3 +1,3 @@
 Ejemplos
 ========
-Códigos de ejemplo! :)
+Proyectos de ejemplo!
