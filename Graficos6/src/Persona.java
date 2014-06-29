@@ -32,9 +32,13 @@ public class Persona {
             if (Math.abs(bcx - pcx) <  b.w/2 + w/2 && Math.abs(bcy - pcy) <  b.h/2 + h/2){
                 vivo = false;
                 b.x=1000;
-                new Thread(() -> {
-                    try { Thread.sleep(3000);}catch(Exception e){}
+                new Thread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        try { Thread.sleep(3000);}catch(Exception e){}
                     vivo = true;
+                    }
                 }).start();
                 return;
             }

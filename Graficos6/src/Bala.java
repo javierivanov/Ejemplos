@@ -28,12 +28,16 @@ public class Bala {
     
     public void disparar()
     {
-        Thread t = new Thread(() -> {
-            while (x <= 640){
-                try{
-                    Thread.sleep(200);
-                } catch(Exception e){}
-                x+=10;
+        Thread t = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                while (x <= 640){
+                    try{
+                        Thread.sleep(200);
+                    } catch(Exception e){}
+                    x+=10;
+                }
             }
         });
         t.start();
